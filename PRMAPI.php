@@ -18,7 +18,7 @@ class PRMAPI{
 				$dist=$pos->distance($player->entity);
 				
 				
-				$chance=$volume*100/$dist; // TODO Improvement on this chance mechanic
+				$chance=($dist<=$volume?100:($dist>$volume*3?0:$idk)); // TODO Improvement on this chance mechanic
 				
 				
 				$chance=min($chance, 100);
