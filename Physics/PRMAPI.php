@@ -138,6 +138,7 @@ class LangConfig{//because built-in seems buggy // read-only
 			}
 			else{
 				console("[ERROR] $path is a directory. Please delete it.");
+				console("[ERROR] Stoping server...");
 				ServerAPI::request()->api->console->run("stop");
 			}
 		}
