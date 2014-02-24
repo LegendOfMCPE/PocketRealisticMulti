@@ -50,7 +50,8 @@ class PocketRealMultiPlugin implements Plugin{
 			$new=!file_exists($this->api->plugin->configPath($this)."settings.yml") and !file_exists($this->api->plugin->configPath($this)."settings.txt");
 			if(!$new and file_exists($this->api->plugin->configPath($this)."settings.txt"))
 				$path=$this->api->plugin->configPath($this)."settings.txt";
-			else $path=$this->api->plugin->configPath($this)."settings.yml");
+			else
+			$path=$this->api->plugin->configPath($this)."settings.yml");
 			$this->config=new Config($path, CONFIG_YAML, array(
 				"default spawnpoint of newly-registered players"=>
 					array("x"=>128, "y"=>80, "z"=>128, "level name"=>"world"),
