@@ -4,7 +4,7 @@
 class=PocketRealMultiPlugin
 name=PocketRealisticMulti
 version=alpha 0.0.0
-apiversion=11,12
+apiversion=12
 author=PEMapModder
 description=Sometimes when we ask for ranks too often, we would find that SCARCITY is the basis of the fun in MCPE survival, SMP or SSP. Do you think admins are needed? No, NOT AT ALL. We just need a console to ban hackers (real hackers who endanger the network safety, not the ones who cheat). And spammers in real life can just be left alone or be put a gag in their mouth. People don't need ladders to climb a mountain. A rope is enough for it.
 */

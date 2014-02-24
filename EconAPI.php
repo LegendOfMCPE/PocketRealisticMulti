@@ -1,5 +1,14 @@
 <?php
 
+/*
+__PocketMine Plugin__
+class=none
+name=EconAPI
+version=alpha 0.0.0
+apiversion=12
+author=PEMapModder
+*/
+
 class EconAPI{
 	public $server, $config;
 	public $list=array();
@@ -13,11 +22,13 @@ class EconAPI{
 		$ext=(file_exists($dir."Economy settings.txt") ? "txt" : "yml");
 		$this->config=new Config($dir."Economy settings.$ext", CONFIG_YAML, array(
 			"crafting recipes"=>array(
-				"purse"=>array(
+				"purse"=>array(PURSE, array(
 					array(PAPER=>3),
 					array(LEATHER=>2)
-				),
-				"wallet"=>array(array(BOOK=>3))
+				)),
+				"wallet"=>array(WALLET, array(
+					array(BOOK=>3))
+				)
 			)
 		));
 	}
@@ -32,16 +43,35 @@ class EconAPI{
 		}
 	}
 	public function craftCmd($c,$a,$i){
-		switch(strtolower($a[0])){
-			case "purse":
-				//$item=PocketRealisticMultiPlugin::get()->getCarriedItem($i);
-				$recipes=$this->config->get("crafting recipes")["purse"];
-				foreach($recipes as $recipe){
-					foreach($recipe as $item){
-						
+		if((isset($a[1]) and is_int($a[1])) or (isset($a[2]) and is_int($a[2])))return "Usage: /craft <item> [amount (integer)] [recipe id (integer)]";
+		$requiredAmount=isset($a[1])?$a[1]:1;
+			//$item=PocketRealisticMultiPlugin::get()->getCarriedItem($i);
+			$recipes=$this->config->get("crafting recipes")[$a[0]][1];
+			$acceptedRecipes=array();
+			if(isset($a[2])){
+				$recipe=$recipes[$a[2]];
+				foreach($recipe as $id=>$min){
+					if($this->countInventory($i, $id)<$min*$requiredAmount)
+						return "You don't have enough ".$this->getItemName($id)."s to craft a ".$a[0].".";
+				}
+				foreach($recipe as $id=>$amount){
+					$i->removeItem($id, 0, $amount);
+				}
+				
+			}
+			foreach($recipes as $recipe){
+				$status=true;
+				foreach($recipe as $id=>$min){
+					if($this->countInventory($i, $id)<$min*$requiredAmount){
+						$status=false;
+						break;
 					}
 				}
-				else return "";
+				if($status===true){
+					$acceptedRecipes[]=$recipe;
+				}
+			}
+			if(count
 		}
 	}
 	public function countInventory(Player $player, $needle){
@@ -52,6 +82,14 @@ class EconAPI{
 				$result+=$item->count;
 		}
 		return $result;
+	}
+	public function getItemName($id){
+		if(isset(Item::$class[$id]))
+			$ret=Item::$class[$id];
+		elseif(isset(Block::$class[$id]))
+			$ret=Block::$class[$id];
+		else return "Unknown ($id)";
+		return str_replace("Item", "", $ret);
 	}
 }
 /*

@@ -1,5 +1,13 @@
 <?php
 
+/*
+__PocketMine Plugin__
+class=none
+name=PRMAPI
+author=PEMapModder
+version=alpha 0.0.0
+apiversion=12
+
 class PRMAPI{
 	public $server, $langEn;
 	public function __destruct(){
