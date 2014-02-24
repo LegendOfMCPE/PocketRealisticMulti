@@ -39,12 +39,12 @@ class PocketRealMultiPlugin implements Plugin{
 		$s=ServerAPI::request();
 		$a=$s->api;
 		if("events"==="events"){
-			$s->addHandler("player.chat", array($this,"event"));
-			$s->addHandler("player.interact", array($this,"event"));
+			$s->addHandler("player.chat", array($this, "event"));
+			$s->addHandler("player.interact", array($this, "event"));
 			$s->addHandler("player.equipment.change", array($this,"event"));
-			$s->addHandler("console.command", array($this,"event"), 30);
-			$s->addHandler("player.spawn", array($this,"event"));
-			$s->addHandler("player.connect", array($this,"event"));
+			$s->addHandler("console.command", array($this, "event"), 30);
+			$s->addHandler("player.spawn", array($this, "event"));
+			$s->addHandler("player.connect", array($this, "event"));
 		}
 		if("configs"==="configs"){
 			$new=!file_exists($this->api->plugin->configPath($this)."settings.yml") and !file_exists($this->api->plugin->configPath($this)."settings.txt");
