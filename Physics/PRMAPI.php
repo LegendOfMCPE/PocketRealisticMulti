@@ -4,9 +4,10 @@
 __PocketMine Plugin__
 class=none
 name=PRMAPI
-author=PEMapModder
+author=PEMapModder And Syriamanal
 version=alpha 0.0.0
 apiversion=12
+*/
 
 class PRMAPI{
 	public $server, $langEn;
