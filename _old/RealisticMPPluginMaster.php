@@ -27,8 +27,6 @@ class PocketRealMultiPlugin implements Plugin{
 	public $playersOkStatus=array();
 	public $proposedSpawn, $defaultSpawn;
 	public function __construct(ServerAPI $a,$s=0){
-		ServerAPI::request()->loadAPI("prm", "PRMAPI", FILE_PATH."plugins/");
-		ServerAPI::request()->loadAPI("econ", "EconAPI", FILE_PATH."plugins/");
 		self::$inst=$this;
 		$this->api=$a;
 	}

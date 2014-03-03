@@ -1,18 +1,8 @@
 <?php
 
-/*
-__PocketMine Plugin__
-class=none
-name=PRMAPI
-author=PEMapModder And Syriamanal
-version=alpha 0.0.0
-apiversion=12
-*/
-
-class PRMAPI{
+class PrmPhysics{
 	public $server, $langEn;
 	public function __destruct(){
-		
 	}
 	public function init(){
 		console(FORMAT_GREEN."[INFO] PRM API loaded");

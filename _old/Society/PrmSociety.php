@@ -1,15 +1,6 @@
 <?php
 
-/*
-__PocketMine Plugin__
-class=none
-name=EconAPI
-version=alpha 0.0.0
-apiversion=12
-author=PEMapModder
-*/
-
-class EconAPI{
+class PrmSociety{
 	public $server, $config;
 	public $list=array();
 	public function init(){
