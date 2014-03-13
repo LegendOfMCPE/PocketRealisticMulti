@@ -14,7 +14,7 @@ Code not in this format may not be merged. Format of code here:
 
 ```php
 if(2<3)
-(\t)return "yes";
+	return "yes";
 ```
 
 * For indents, ALWAYS use horizontal tabs (`\t`)
@@ -23,13 +23,12 @@ if(2<3)
 
 ```php
 $me=array(
-(\t)(\t)"key0"=>array(
-(\t)(\t)(\t)(\t)"very long code"
-(\t)(\t))
+		"key0"=>array(
+				"very long code"
+		)
 );
 ```
 
-* Do not use namespaces.
 * All keywords (non-constant) should be in lowercase.
 * All built-in functions should use case from reference at http://php.net
 * All constants other than `true`, `false` and `null` should use uppercase.
