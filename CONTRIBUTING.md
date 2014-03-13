@@ -4,7 +4,7 @@ Guidelines for Contrinuting for PocketRealisticMulti (PRM)
 ##To be a collaborator...
 I (@PEMapModder) will invite you if I want to.
 
-##To contribute code:
+##To contribute code…
 Code not in this format may not be merged. Format of code here:
 * Remove all spaces unless:
  * they are in quotes (`""`)
@@ -35,3 +35,9 @@ $me=array(
 * All constants other than `true`, `false` and `null` should use uppercase.
 * Variable names, function names and class names should use the conventional style of naming, i.e. `ClassName::functionName($varName)`
 * Do not contain your own name in the commit.
+* For complicated mathematical code, you should add comments, and optionally split the variables into multiple lines of declaring variables. Also add comments for TODOs.
+* Do not contain non-ASCII characters in PHP code. You may create raw text files/config files at /PocketRealisticMulti/code/assets that contain multi-byte characters.
+
+##To create issues…
+* Don't duplicate issues.
+
