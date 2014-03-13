@@ -30,6 +30,8 @@ class PrmMainPlugin{
 		$path=FILE_PATH."plugins/PocketRealisticMulti/code/classes/";
 		$dir=dir($path);
 		while(($file=$dir->read())!==false){#TODO
+			if(is_file($path.$file) and substr($file, -4)==".php")
+				require_once($path.$file);
 		}
 	}
 }
