@@ -37,6 +37,10 @@ $me=array(
 * Do not contain your own name in the commit.
 * For complicated mathematical code, you should add comments, and optionally split the variables into multiple lines of declaring variables. Also add comments for TODOs.
 * Do not contain non-ASCII characters in PHP code. You may create raw text files/config files at /PocketRealisticMulti/code/assets that contain multi-byte characters.
+* Create files only and directly at  PocketRealisticMulti/code/classes.
+* Only create files when there is a new class.
+* All functions and constants should either start with PRM_ xor prm_, or be contained in a class.
+* Only create pull requests with base branch as PEMapModder/master.
 
 ##To create issues…
 * Don't duplicate issues.
