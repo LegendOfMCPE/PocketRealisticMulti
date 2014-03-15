@@ -3,6 +3,7 @@
 class PrmSoc{
 	public $econ=false;
 	public function __construct(){
-		$this->econ=new PrmEcon();
+		if(class_exists("PrmEcon"))
+			$this->econ=new PrmEcon();
 	}
 }
