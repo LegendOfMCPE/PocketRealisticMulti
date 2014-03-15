@@ -9,20 +9,11 @@ apiversion=12,13
 author=PEMapModder
 */
 
-class PrmMainPlugin{
-	public $api, $server, $main;
-	private static $instance=false;
-	private static function setInstance(self &$i){
-		self::$instance=&$i;
-	}
-	public static function get(){
-		return self::$instance;
-	}
-	public static function request(){
-		return self::get()->main;
-	}
+class PrmMainPlugin implements Plugin{
+	public $api, $server;
+	public $main=false, $phys=false, $bio=false, $soc=false;
 	public function __construct(ServerAPI $api, $s=0){
-		self::setInstance(&$this);
+		self::setInstance($this);
 		$this->api=$api;
 		$this->server=ServerAPI::request();
 		self::requireAll();
@@ -39,5 +30,15 @@ class PrmMainPlugin{
 			if(is_file($path.$file) and substr($file, -4)==".php")
 				require_once($path.$file);
 		}
+	}
+	private static $instance=false;
+	private static function setInstance(self &$i){
+		self::$instance=&$i;
+	}
+	public static function get(){
+		return self::$instance;
+	}
+	public static function request($c="main"){
+		return self::get()->$c;
 	}
 }

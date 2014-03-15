@@ -40,6 +40,7 @@ $me=array(
 * Only create files when there is a new class.
 * All functions and constants should either start with PRM_ xor prm_, or be contained in a class.
 * Only create pull requests with base branch as PEMapModder/master.
+* Use `and` and `or` instead of `&&` and `||`.
 
 ##To create issues…
 * Don't duplicate issues.
