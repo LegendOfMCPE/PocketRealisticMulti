@@ -1,9 +1,5 @@
 <?php
 
-class PrmSoc{
+class PrmSoc extends PrmCategory{
 	public $econ=false;
-	public function __construct(){
-		if(class_exists("PrmEcon"))
-			$this->econ=new PrmEcon();
-	}
 }

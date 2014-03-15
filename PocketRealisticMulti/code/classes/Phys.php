@@ -1,10 +1,5 @@
 <?php
 
-class PrmPhys{
+class PrmPhys extends PrmCategory{
 	public $gravity=false, $sound=false;
-	public function __construct(){
-		if(class_exists("PrmGravityHandler"))
-			$this->gravity=new PrmGravityHandler();
-		$this->sound=new PrmSoundHandler();
-	}
 }
