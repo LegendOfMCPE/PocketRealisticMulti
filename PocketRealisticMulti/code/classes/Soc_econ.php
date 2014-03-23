@@ -3,7 +3,7 @@
 class PrmEcon{
 	public $config=false;
 	public function __construct(){
-		
+		$this->server=ServerAPI::request();
 	}
 }
 define("PURSE", 341);
