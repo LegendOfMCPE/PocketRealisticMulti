@@ -11,9 +11,7 @@ The current outline of PocketRealisticMulti:
   1. Ropes
 1. Society
   1. Economy
-  1. Philosophy
-    * Birth handler
-    * Death handler
+  1. Philosophy (Birth and death handler)
 1. Biology
   1. Realistic health
   1. NPCs
