@@ -5,4 +5,6 @@ Sometimes when we ask for ranks too often, we would find that SCARCITY is the ba
 
 [View contributing notes](https://github.com/PEMapModder/PocketRealisticMulti/blob/master/CONTRIBUTING.md)
 
-[View license](https://github.com/pemapmodder/PocketRealisticMulti/blob/master/LICENSE)
+[View license](https://github.com/PEMapModder/PocketRealisticMulti/blob/master/LICENSE)
+
+[View plugin outline](https://github.com/PEMapModder/PocketRealisticMulti/blob/maater/OUTLINE.md)
