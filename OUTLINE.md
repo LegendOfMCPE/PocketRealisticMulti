@@ -6,15 +6,15 @@ To maximize convenience in  customization, this plugin package is designed to wo
 
 The current outline of PocketRealisticMulti:
 1. Physics
-  1. Gravity
-  1. Relastic sound physics
-  1. Ropes
+ 1. Gravity
+ 1. Relastic sound physics
+ 1. Ropes
 1. Society
-  1. Economy
-  1. Philosophy (Birth and death handler)
+ 1. Economy
+ 1. Philosophy (Birth and death handler)
 1. Biology
-  1. Realistic health
-  1. NPCs
+ 1. Realistic health
+ 1. NPCs
 
 
 
