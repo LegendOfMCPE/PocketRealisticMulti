@@ -7,6 +7,6 @@ function prm_load_list($class){
 	case "PrmBio":
 		return array("PrmHealthHandler");
 	case "PrmSoc":
-		return array("PrmEcon");
+		return array("PrmEcon", "PrmPhilo");
 	}
 }
