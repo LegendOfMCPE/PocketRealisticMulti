@@ -8,5 +8,9 @@ function prm_load_list($class){
 		return array("PrmHealthHandler");
 	case "PrmSoc":
 		return array("PrmEcon", "PrmPhilo");
+	case "PrmPhilo":
+		return array("PrmDeathHandler", "PrmBirthHandler");
+	default:
+		return array();
 	}
 }
