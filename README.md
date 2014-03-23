@@ -7,4 +7,4 @@ Sometimes when we ask for ranks too often, we would find that SCARCITY is the ba
 
 [View license](https://github.com/PEMapModder/PocketRealisticMulti/blob/master/LICENSE)
 
-[View plugin outline](https://github.com/PEMapModder/PocketRealisticMulti/blob/maater/OUTLINE.md)
+[View plugin outline](https://github.com/PEMapModder/PocketRealisticMulti/blob/master/OUTLINE.md)
