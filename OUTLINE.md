@@ -5,14 +5,14 @@ This plugin consists of several packages and subpackages. In each package/subpac
 To maximize convenience in  customization, this plugin package is designed to work like checkbox groups. To disable the whole plugin, take away the main plugin. To disanle a particular package/subpackage, take away the file of the packsge's name into somewhere out of the `plugins/PocketRealisticMulti/code/classes/` folder. To disable a particular plugin, just take that particular file away. (This plugin uses a smart `if(class_exists("class"))` when the package tries to create an instance of that plugin/subpackage.
 
 The current outline of PocketRealisticMulti:
-1. Physics
+* Physics
  * Gravity
  * Relastic sound physics
  * Ropes
-1. Society
+* Society
  * Economy
  * Philosophy (Birth and death handler)
-1. Biology
+* Biology
  * Realistic health
  * NPCs
 
