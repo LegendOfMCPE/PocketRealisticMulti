@@ -8,8 +8,8 @@ use pocketmine\Server;
 use pocketmine\event\Event;
 use pocketmine\event\EventPriority as Priority;
 use pocketmine\event\Listener;
-use pocketmine\utils\Config;
 
+use prm\utils\Config;
 use prm\Load;
 
 class Players{
@@ -17,7 +17,7 @@ class Players{
 	public $players=array();
 	public function __construct(){
 		$this->path=Load::get()->path."players/";
-		$this->config=new Config($this->path."../players-config.yml", Config::YAML, array(
+		$this->config=new Config($this->path."../players-config.yml", array(
 			"id"=>0,
 		));
 		$this->server=Server::getInstance();
@@ -26,13 +26,14 @@ class Players{
 	}
 	public function onLogin(Event $event){
 		$p=$event->getPlayer();
-		$this->players[$p->getName()]=new Config($this->path.strtolower($p->getName()).".yml", Config::YAML, array(
+		$this->players[$p->getName()]=new Config($this->path.strtolower($p->getName()).".yml", array(
 			"register-time"=>time(),
-			"id"=>$this->config->get("id")
+			"id"=>$this->config["id"]++,
 		));
-		$this->config->set("id", $this->config->get("id")+1);
 	}
 	public function onQuit(Event $event){
 		$p=$event->getPlayer();
+		$this->players[$p->getName()]->save();
+		unset($this->players[$p->getName()]);
 	}
 }
