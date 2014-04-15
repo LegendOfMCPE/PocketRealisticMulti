@@ -8,16 +8,29 @@ use pocketmine\Server;
 use pocketmine\event\Event;
 use pocketmine\event\EventPriority as Priority;
 use pocketmine\event\Listener;
+use pocketmine\utils\Config;
 
 use prm\Load;
 
 class Players{
+	public $path=false;
+	public $players=array();
 	public function __construct(){
+		$this->path=Load::get()->path."players/";
+		$this->config=new Config($this->path."../players-config.yml", Config::YAML, array(
+			"id"=>0,
+		));
+		$this->server=Server::getInstance();
 		foreach(array("Login", "Quit") as $e)
-			Server::getInstance()->getPluginManager()->registerEvent("pocketmine\\event\\player\\Player".$e."Event", $this, EventPriority::HIGH, new CbEvtExe(array($this, "on".$e)), Load::get(), true);
+			$this->server->getPluginManager()->registerEvent("pocketmine\\event\\player\\Player".$e."Event", $this, EventPriority::HIGH, new CbEvtExe(array($this, "on".$e)), Load::get(), true);
 	}
 	public function onLogin(Event $event){
 		$p=$event->getPlayer();
+		$this->players[$p->getName()]=new Config($this->path.strtolower($p->getName()).".yml", Config::YAML, array(
+			"register-time"=>time(),
+			"id"=>$this->config->get("id")
+		));
+		$this->config->set("id", $this->config->get("id")+1);
 	}
 	public function onQuit(Event $event){
 		$p=$event->getPlayer();
