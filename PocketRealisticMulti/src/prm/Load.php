@@ -6,6 +6,10 @@ use pocketmine\plugin\PluginBase as Pb;
 use poxketmine\utils\Config;
 
 class Load extends Pb{
+	public static $instance;
+	public static function get(){
+		return $instance;
+	}
 	public function onLoad(){
 		$ne=$this->getServer()."plugins/PocketRealisticMulti/loadList.";
 		$ext="yml";
