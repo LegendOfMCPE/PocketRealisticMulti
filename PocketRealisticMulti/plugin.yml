@@ -1,0 +1,9 @@
+name: PocketRealisticMulti
+authors:
+- PEMapModder
+load: STARTUP
+version: alpha 1.0
+api: [1.0.0]
+main: prm\Load;
+description: PocketMine plugin that makes Minecraft PE gameplay most realistic.
+website: https://githuh.com/PEMapModder/PocketRealisticMulti

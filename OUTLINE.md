@@ -2,8 +2,6 @@ Plugin Outline
 ===
 This plugin consists of several packages and subpackages. In each package/subpackage, there are several plugins that (can) work independently.
 
-To maximize convenience in  customization, this plugin package is designed to work like checkbox groups. To disable the whole plugin, take away the main plugin. To disanle a particular package/subpackage, take away the file of the packsge's name into somewhere out of the `plugins/PocketRealisticMulti/code/classes/` folder. To disable a particular plugin, just take that particular file away. (This plugin uses a smart `if(class_exists("class"))` when the package tries to create an instance of that plugin/subpackage.
-
 The current outline of PocketRealisticMulti:
 * Physics
  * Gravity
@@ -19,6 +17,6 @@ The current outline of PocketRealisticMulti:
 
 
 
-Copyright © 2014 PEMapModder, the Innovator of MCPE
+Copyright © 2014 PEMapModder
 
 You may copy these ideas for any non-commercial generally-legal purposes as long as you give the credit of the ideas to PEMapModder. If you are going to give any suggestions, please create an issue in [this repository](https://github.com/PEMapModder/PocketRealisticMulti).
