@@ -8,13 +8,16 @@ use pocketmine\utils\Config;
 use prm\datasaver\Players;
 
 class Load extends Pb{
+	public $path = false;
 	public static $instance=false;
 	public static function get(){
 		return $instance;
 	}
 	public function onLoad(){
 		self::$instance=$this;
-		$ne=$this->getServer()."plugins/PocketRealisticMulti/loadList.";
+		$this->path=$this->getServer()->getDataPath()."plugins/PocketRealisticMulti/";
+		@mkdir($this->path);
+		$ne=$this->path."loadList.";
 		$ext="yml";
 		if(is_file($ne."txt"))
 			$ext="txt";
