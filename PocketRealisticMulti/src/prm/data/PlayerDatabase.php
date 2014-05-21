@@ -13,9 +13,9 @@ class PlayerDatabase{
 		return array(
 			"first-online" => time(),
 			"last-online" => time(),
-			"physics" => Physics::getDefaultConfig(),
-			"biology" => Biology::getDefaultConfig(),
-			"society" => Society::getDefaultConfig(),
+			"physics" => Physics::getDefaultPConfig(),
+			"biology" => Biology::getDefaultPConfig(),
+			"society" => Society::getDefaultPConfig(),
 			"uid" => Load::get()->saved["id"]++
 		);
 	}
