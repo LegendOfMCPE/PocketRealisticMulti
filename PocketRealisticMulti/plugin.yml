@@ -1,6 +1,5 @@
 name: PocketRealisticMulti
-authors:
-- PEMapModder
+author: LegendOfMCPE
 load: STARTUP
 version: alpha 1.0
 api: [1.0.0]
