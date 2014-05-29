@@ -9,8 +9,13 @@ class Database{
 		$this->main = $plugin;
 		$this->path = $plugin->getDataFolder()."$name/";
 		$this->api = $api === null ? Load::CURRENT_API:$api;
+		@mkdir($this->path = $this->main->getDataFolder()."players/");
 	}
-	public function getPlayer(Player $player){ // you can directly array-access the returned object without the necessity to return with reference
-		return new PlayerDatabase($this->path.$player->getName().".json", $player, $this->api);
+	public function get(Player $player){
+		return @$this->sessions[$player->CID];
 	}
+	public function pInit(Player $player){
+		$this->sessions[$player->CID] = new Session($player, $this->path.strtolower($player->getName()).".json");
+	}
+	
 }
