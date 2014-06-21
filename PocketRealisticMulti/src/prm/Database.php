@@ -1,11 +1,8 @@
 <?php
 
-namespace prm\physics;
+namespace prm;
 
-use prm\Main;
-use prm\Module;
-
-class Physics implements Module{
+class Database{
 	private $main;
 	public function __construct(Main $main){
 		$this->main = $main;
