@@ -1,0 +1,5 @@
+---
+sound waves:
+  chat override: true
+  chat default volume: 15
+...

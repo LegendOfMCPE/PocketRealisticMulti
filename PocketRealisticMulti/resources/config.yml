@@ -1,2 +1,13 @@
 ---
+#################
+#### MODULES ####
+#################
+## What modules/submodules to enable? If master is turned off, its submodules are also turned off. If master is turned on, its submodules will enabled if themselves are enabled.
+modules:
+  physics:
+    master: true
+    sound waves:
+      master: true
+      chat override: true
+      /me override: true
 ...
