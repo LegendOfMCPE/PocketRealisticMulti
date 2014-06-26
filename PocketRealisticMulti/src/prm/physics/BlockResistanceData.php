@@ -11,11 +11,11 @@ class BlockResistanceData{
 	}
 	public function getResistance(Block $block){
 		$key = $block->getID().":".$block->getDamage();
-		if(isset($this->data[$key])){
+		if(isset($this->data[$key]) and is_numeric($this->data[$key])){
 			return $this->data[$key];
 		}
 		$key = $block->getID().""; // cast to string
-		if(isset($this->data[$key])){
+		if(isset($this->data[$key]) and is_numeric($this->data[$key])){
 			return $this->data[$key];
 		}
 		return $this->data["default"];
