@@ -12,6 +12,7 @@ class Main extends PluginBase{
 	private $physics, $biology;
 	/** @var Database */
 	private $database;
+	/** @var Table */
 	private $blocks;
 	const INITIAL = 0;
 	private static $versions = [

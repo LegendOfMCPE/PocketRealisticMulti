@@ -15,8 +15,6 @@ class Sound implements Submodule{
 	private $server;
 	private $main;
 	private $config;
-	/** @var Table */
-	private $resistance;
 	public function __construct(Main $main){
 		$this->main = $main;
 		$this->server = $this->main->getServer();
@@ -30,7 +28,6 @@ class Sound implements Submodule{
 			return;
 		}
 		$this->config = $set;
-		$this->resistance = new Table($this->main->getDataFolder()."block properties.txt");
 		$this->enabled = true;
 	}
 	public function disable(){
@@ -59,6 +56,7 @@ class Sound implements Submodule{
 		$wave->init();
 	}
 	public function getSoundResistanceData(){
-		return $this->main->getBlockProperties()->getKeyedColumn(0, 1);
+		$data = $this->main->getBlockProperties()->getKeyedColumn(0, 1);
+
 	}
 }

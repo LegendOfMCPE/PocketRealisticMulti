@@ -1,0 +1,14 @@
+# Line of description
+block ID (and optionally damage) | how much should the magnitiude of the sound wave decrease (warning: do NOT put 0 unless you suppose it is a wire that can carry sound infinitely far)
+# put 68719476719 for infinitely large
+blocks | sound resistance
+default | 5
+0 | 1
+7 | 68719476719
+8 | 2
+9 | 2
+10 | 3
+11 | 3
+50 | 1
+40 | 1
+# TODO
