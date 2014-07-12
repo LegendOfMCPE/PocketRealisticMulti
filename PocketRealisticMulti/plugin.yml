@@ -2,7 +2,7 @@ name: PocketRealisticMulti Beta
 author: LegendOfMCPE
 load: POSTWORLD
 version: 1.0
-api: [1.0.0]
+api: [1.1.0]
 main: prm\Main
 description: PocketMine plugin that makes Minecraft PE gameplay most realistic.
 website: https://github.com/LegendOfMCPE/PocketRealisticMulti
